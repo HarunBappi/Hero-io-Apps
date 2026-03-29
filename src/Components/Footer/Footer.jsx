@@ -6,11 +6,11 @@ const Footer = () => {
       <div className="bg-[#001931] text-neutral-content p-5 flex justify-between">
         <aside className='flex items-center justify-center gap-1'>
           <img className='w-10' src={footerIcon} alt="" />
-          <p> HERO.IO
+          <p className='gradient-color font-semibold'> HERO.IO
           </p>
         </aside>
         <div>
-          <h6 className="footer-title">Social Links</h6>
+          <h6 className="text-white uppercase mb-2 font-semibold">Social Links</h6>
           <div className="grid grid-flow-col gap-4">
             <a>
               <svg
@@ -50,8 +50,8 @@ const Footer = () => {
       </div>
       <div className=" bg-[#001931] text-neutral-content p-2">
         <aside className='border-t ml-4 mr-4'>
-          <p className='text-center mt-2'>
-            Copyright © {new Date().getFullYear()} - All right reserved by <span className="text-yellow-600 font-semibold">HERO.IO</span>
+          <p className='text-xs md:text-sm text-center mt-2'>
+            Copyright © {new Date().getFullYear()} - All right reserved by <span className="gradient-color font-semibold">HERO.IO</span>
           </p>
         </aside>
       </div>
