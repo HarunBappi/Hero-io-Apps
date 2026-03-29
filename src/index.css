@@ -3,6 +3,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-body{
+body {
   font-family: "Inter", sans-serif;
+}
+
+.gradient-color {
+  background: linear-gradient(90deg, #632ee3, #9f62f2);
+  background-clip: text;
+  color: transparent;
 }
