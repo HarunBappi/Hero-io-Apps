@@ -1,6 +1,6 @@
 [
   {
-    "image": "https://source.unsplash.com/featured/?chat,app",
+    "image": "https://images.unsplash.com/photo-1611605698335-8b1569810432",
     "title": "ChatMaster",
     "companyName": "TechNova Ltd.",
     "id": 1,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?fitness,app",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
     "title": "FitLife",
     "companyName": "HealthCorp",
     "id": 2,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?food,delivery",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
     "title": "Foodies",
     "companyName": "Yummy Inc.",
     "id": 3,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?education,learning",
+    "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
     "title": "EduPro",
     "companyName": "LearnHub",
     "id": 4,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?travel",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
     "title": "TravelMate",
     "companyName": "GlobeTrotter",
     "id": 5,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?shopping",
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
     "title": "ShopEasy",
     "companyName": "RetailSoft",
     "id": 6,
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?music",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4",
     "title": "MusicWave",
     "companyName": "SoundLab",
     "id": 7,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?news",
+    "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e",
     "title": "NewsFlash",
     "companyName": "MediaCorp",
     "id": 8,
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?gaming",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e",
     "title": "GameZone",
     "companyName": "PlayStudio",
     "id": 9,
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?security",
+    "image": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87",
     "title": "SecureVault",
     "companyName": "CyberSafe",
     "id": 10,
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?notes",
+    "image": "https://images.unsplash.com/photo-1517842645767-c639042777db",
     "title": "NoteKeeper",
     "companyName": "Productive Inc.",
     "id": 11,
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?weather",
+    "image": "https://images.unsplash.com/photo-1501973801540-537f08ccae7b",
     "title": "WeatherNow",
     "companyName": "ClimateTech",
     "id": 12,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?finance",
+    "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c",
     "title": "MoneyTrack",
     "companyName": "FinTech Ltd.",
     "id": 13,
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?camera",
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32",
     "title": "PhotoSnap",
     "companyName": "Pixel Studio",
     "id": 14,
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?video",
+    "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
     "title": "VideoHub",
     "companyName": "StreamTech",
     "id": 15,
@@ -270,7 +270,7 @@
     ]
   },
   {
-    "image": "https://source.unsplash.com/featured/?book",
+    "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794",
     "title": "BookReader",
     "companyName": "Readify",
     "id": 16,

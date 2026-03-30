@@ -13,10 +13,7 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
-      },
-      {
-        path: "trendingapps",
-        Component: TrendingApps,
+        loader: () => fetch("/hero-io.json")
       },
       {
         path: "apps",
