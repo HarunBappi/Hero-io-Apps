@@ -2,6 +2,7 @@ import React from "react";
 import { FaGooglePlay } from "react-icons/fa";
 import { FaAppStoreIos } from "react-icons/fa";
 import hero from "../../assets/hero.png";
+import { Link } from "react-router";
 const Banner = () => {
   return (
     <div>
@@ -17,14 +18,18 @@ const Banner = () => {
             experiences that truly make an impact.
           </p>
           <div className="flex justify-center items-center gap-3">
-            <button className="flex btn">
+            <a href="https://play.google.com/store/apps" target="_blank">
+             <button className="flex btn">
               <FaGooglePlay></FaGooglePlay>
               <h3>Google Play</h3>
             </button>
-            <button className="btn flex">
+            </a>
+            <a href="https://www.apple.com/app-store/" target="_blank">
+              <button className="btn flex">
               <FaAppStoreIos></FaAppStoreIos>
               <h3>App Store</h3>
             </button>
+            </a>
           </div>
           <img src={hero} alt="" />
         </div>
