@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import lodingImage from "../assets/logo.png";
 import Apps from "../Pages/Apps/Apps";
 import AppDetails from "../Pages/AppDeatails/AppDetails";
+import NotFound from "../Pages/NotFound/NotFound";
 
 const allApps = fetch("/hero-io.json").then((res) => res.json());
 
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLayout,
+    errorElement: <NotFound></NotFound>,
     children: [
       {
         index: true,

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MdOutlineFileDownload } from "react-icons/md";
 import { FaStar } from "react-icons/fa6";
+import { toast } from 'react-toastify';
 const Installation = () => {
     const [installedApp, setInstalledApp] = useState([])
     useEffect(()=>{
@@ -12,6 +13,15 @@ const Installation = () => {
   const formateMillion = (num) => {
     return (num / 100000).toFixed(1) + "M";
   };
+
+//   handle UnInstall Button
+const handleUninstall = (id) =>{
+    const removeApp = installedApp.find(app => app.id === id)
+    const update = installedApp.filter(app => app.id !== id)
+    setInstalledApp(update)
+    localStorage.setItem("installedApps", JSON.stringify(update))
+    toast.warning(`${removeApp.title} Uninstall successfully `)
+}
     return (
         <div className="w-11/12 mx-auto py-5">
       <h1 className="text-2xl font-bold mb-2 text-center">Your Installed Apps</h1>
@@ -57,7 +67,9 @@ const Installation = () => {
                         </div>
                     </div>
                     <div>
-                        <button className='btn text-white bg-[#00D390]'>Uninstall</button>
+                        <button
+                        onClick={()=> handleUninstall(app.id)}
+                        className='btn text-white bg-[#00D390]'>Uninstall</button>
                     </div>
                 </div>
             </div>
