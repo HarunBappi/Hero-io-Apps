@@ -13,7 +13,8 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 const AppDetails = () => {
   const { id } = useParams();

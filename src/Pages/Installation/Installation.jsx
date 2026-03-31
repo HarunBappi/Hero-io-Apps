@@ -3,7 +3,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { FaStar } from "react-icons/fa6";
 import { toast } from "react-toastify";
 import { IoIosArrowDown } from "react-icons/io";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Installation = () => {
   const [installedApp, setInstalledApp] = useState([]);
