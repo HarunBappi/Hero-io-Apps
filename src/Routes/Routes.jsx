@@ -2,10 +2,10 @@ import { createBrowserRouter } from "react-router";
 import HomeLayout from "../Components/HomeLayout/HomeLayout";
 import Home from "../Components/Home/Home";
 import Installation from "../Pages/Installation/Installation";
-import Details from "../Pages/Deatails/Details";
 import { Suspense } from "react";
 import lodingImage from "../assets/logo.png";
 import Apps from "../Pages/Apps/Apps";
+import AppDetails from "../Pages/AppDeatails/AppDetails";
 
 const allApps = fetch("/hero-io.json").then((res) => res.json());
 
@@ -36,8 +36,9 @@ const router = createBrowserRouter([
         Component: Installation,
       },
       {
-        path: "details",
-        Component: Details,
+        path: "/details/:id",
+        loader: () => fetch("/hero-io.json"),
+        Component: AppDetails
       },
     ],
   },

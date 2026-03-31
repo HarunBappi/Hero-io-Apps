@@ -3,13 +3,13 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router";
 const TrendingApps = ({ trending }) => {
-  const { image, title, ratingAvg, downloads } = trending;
+  const { id, image, title, ratingAvg, downloads } = trending;
   // Convert Million Function
   const formateMillion = (num) => {
     return (num / 100000).toFixed(1) + "M";
   };
   return (
-    <Link to="/details">
+    <Link to={`/details/${id}`}>
     <div className="card bg-base-100 shadow-sm">
       <figure className="p-2">
         <img src={image} alt={title} className="rounded-xl h-35 w-full" />
