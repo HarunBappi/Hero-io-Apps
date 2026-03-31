@@ -3,6 +3,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { FaStar } from "react-icons/fa6";
 import { toast } from "react-toastify";
 import { IoIosArrowDown } from "react-icons/io";
+import { Helmet } from "react-helmet";
 
 const Installation = () => {
   const [installedApp, setInstalledApp] = useState([]);
@@ -43,6 +44,9 @@ const Installation = () => {
   };
   return (
     <div className="w-11/12 mx-auto py-5">
+      <Helmet>
+              <title>Hero io | Installation</title>
+        </Helmet>
       <h1 className="text-2xl font-bold mb-2 text-center">
         Your Installed Apps
       </h1>

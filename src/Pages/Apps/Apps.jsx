@@ -1,6 +1,7 @@
 import React, { use, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import TrendingApps from "../../Components/TrendingApps/TrendingApps";
+import { Helmet } from "react-helmet";
 const Apps = ({ allApps }) => {
   const apps = use(allApps);
   //  Search Functionality
@@ -12,6 +13,9 @@ const Apps = ({ allApps }) => {
 
   return (
     <div className="w-11/12 mx-auto py-5">
+      <Helmet>
+              <title>Hero io | All Apps</title>
+        </Helmet>
       {/* Apps Found And Search Feild */}
       <div className="flex justify-between items-center flex-col md:flex-row gap-5 md:gap-0">
         <h2 className="text-xl font-semibold">

@@ -5,10 +5,19 @@ import { FaStar } from "react-icons/fa6";
 import { AiTwotoneLike } from "react-icons/ai";
 import { getInstallApps, saveInstalledApps } from "../../JS/LocalStorage";
 import { toast } from "react-toastify";
+import {
+  Bar,
+  BarChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
+import { Helmet } from "react-helmet";
+
 const AppDetails = () => {
   const { id } = useParams();
   const detailsApp = useLoaderData();
-
   const singleApp = detailsApp.find((app) => app.id === parseInt(id));
   const {
     image,
@@ -22,6 +31,9 @@ const AppDetails = () => {
     ratings,
   } = singleApp;
 
+  //   chart data revarse
+  const reverseRatings = [...ratings].reverse();
+
   // Convert Million Function
   const formateMillion = (num) => {
     return (num / 100000).toFixed(1) + "M";
@@ -33,25 +45,28 @@ const AppDetails = () => {
   };
 
   // Insatall Apps Functionality in localStorage
-  const [installedApps, setInstalledApps] = useState([])
-  useEffect(()=>{
-    const data = getInstallApps()
-    setInstalledApps(data)
-  },[])
+  const [installedApps, setInstalledApps] = useState([]);
+  useEffect(() => {
+    const data = getInstallApps();
+    setInstalledApps(data);
+  }, []);
 
   const isInstalled = installedApps.find((app) => app.id === singleApp.id);
   const handleInstallButton = () => {
     if (!isInstalled) {
       const updateApps = [...installedApps, singleApp];
-      setInstalledApps(updateApps)
+      setInstalledApps(updateApps);
       saveInstalledApps(updateApps);
-      toast.success(`${singleApp.title} Installed successfully `)
+      toast.success(`${singleApp.title} Installed successfully `);
     }
   };
   return (
     <div className="bg-gray-50">
+      <Helmet>
+        <title>Hero io | Details</title>
+      </Helmet>
       <div className="w-11/12 mx-auto pt-8 pb-6">
-        <div className="flex gap-5">
+        <div className="flex flex-col md:flex-row gap-5">
           <div>
             <img className="h-50 rounded" src={image} alt={title} />
           </div>
@@ -65,7 +80,7 @@ const AppDetails = () => {
               </p>
             </div>
             {/* 3 Items of Download, rating and reviews */}
-            <div className="border-t border-gray-300 mt-4 flex flex-col md:flex-row gap-10 items-center">
+            <div className="border-t border-gray-300 mt-4 flex flex-row gap-10 items-center">
               <div className="mt-5 flex flex-col gap-1">
                 <MdOutlineFileDownload className="text-green-500 text-xl"></MdOutlineFileDownload>
                 <p className="text-sm  text-gray-400">Downloads</p>
@@ -93,15 +108,22 @@ const AppDetails = () => {
         </div>
         {/* Rating and Description */}
         <div>
-          <div className="border-t border-gray-300 mt-5">
-            <h1>Rating</h1>
-            {ratings.map((rating, id) => (
-              <div key={id}>
-                <li>
-                  {rating.name} - {rating.count}
-                </li>
-              </div>
-            ))}
+          <div className="border-t border-gray-300 mt-5 pt-4">
+            <h1 className="text-xl font-semibold mb-4">Ratings</h1>
+            <div className="w-full h-72">
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart
+                  layout="vertical"
+                  data={reverseRatings}
+                  margin={{ top: 10, right: 30, left: 30, bottom: 10 }}
+                >
+                  <XAxis type="number"></XAxis>
+                  <YAxis dataKey="name" type="category"></YAxis>
+                  <Tooltip></Tooltip>
+                  <Bar dataKey="count" fill="#FF8811"></Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
           <div className="border-t border-gray-300 mt-5">
             <h1 className="text-xl font-semibold mt-3">Description</h1>
