@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router";
+import { useLoaderData, useNavigate, useParams } from "react-router";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { FaStar } from "react-icons/fa6";
 import { AiTwotoneLike } from "react-icons/ai";
@@ -15,11 +15,34 @@ import {
 } from "recharts";
 import { Helmet } from "react-helmet-async";
 
-
 const AppDetails = () => {
   const { id } = useParams();
   const detailsApp = useLoaderData();
-  const singleApp = detailsApp.find((app) => app.id === parseInt(id));
+  const navigate = useNavigate();
+  const numericId = Number(id)
+  if(isNaN(numericId)){
+    return (
+    <div className="flex justify-center items-center h-screen flex-col">
+      <h1 className="text-2xl font-bold text-red-500">
+        Invalid App ID
+      </h1>
+      <button onClick={() => navigate("/apps")} className="btn mt-4">
+          Back to Apps
+        </button>
+    </div>
+  );
+  }
+  const singleApp = detailsApp.find((app) => app.id === parseInt(numericId));
+  if (!singleApp) {
+    return (
+      <div className="flex justify-center items-center h-screen flex-col">
+        <h1 className="text-2xl font-bold text-red-500">App Not Found</h1>
+        <button onClick={() => navigate("/apps")} className="btn mt-4">
+          Back to Apps
+        </button>
+      </div>
+    );
+  }
   const {
     image,
     title,
