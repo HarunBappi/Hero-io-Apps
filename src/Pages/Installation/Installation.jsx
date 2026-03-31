@@ -58,7 +58,7 @@ const Installation = () => {
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-xl font-semibold">
-              {installedApp.length} App Found
+              ({installedApp.length}) App Found
             </h1>
           </div>
           <div>

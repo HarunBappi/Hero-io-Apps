@@ -20,6 +20,12 @@ const Apps = () => {
         <title>Hero io | All Apps</title>
       </Helmet>
       {/* Apps Found And Search Feild */}
+      <div className="text-center mb-8">
+        <h1 className="text-xl font-semibold">Our All Applications</h1>
+        <p className="text-xs text-gray-400">
+          Explore All Apps on the Market developed by us. We code for Millions
+        </p>
+      </div>
       <div className="flex justify-between items-center flex-col md:flex-row gap-5 md:gap-0">
         <h2 className="text-xl font-semibold">
           ({searchFilter.length}) Apps Found
@@ -53,7 +59,7 @@ const Apps = () => {
           ))}
         </div>
       ) : (
-        <div className="text-center mt-10 text-gray-500">No Data Found 😢</div>
+        <div className="text-center mt-10 text-gray-500">No Data Found </div>
       )}
     </div>
   );
